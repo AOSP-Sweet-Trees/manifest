@@ -15,9 +15,6 @@
   <!-- Rootdir -->
   <project path="libcore" name="LineageOS/android_libcore" groups="pdk" remote="LineageOS" />
 
-  <!-- Build -->
-  <project path="build/release" name="LineageOS/android_build_release" groups="pdk,tradefed" remote="LineageOS" />
-
   <!-- Device -->
   <project path="device/generic/common" name="LineageOS/android_device_generic_common" groups="pdk" remote="LineageOS" />
   <project path="device/google/atv" name="LineageOS/android_device_google_atv" groups="device,broadcom_pdk,generic_fs,pdk" remote="LineageOS" />

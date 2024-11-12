@@ -9,6 +9,10 @@
            fetch="https://gitlab.com/PixelOS-AOSP"
            revision="refs/heads/fourteen" />
 
+  <remote  name="k"
+           fetch="https://github.com/AOSP-Sweet-Trees"
+           revision="refs/heads/fourteen" />
+
   <!-- Rootdir -->
   <project path="bionic" name="bionic" groups="pdk" remote="PixelOS" />
   <project path="art" name="art" groups="pdk" remote="PixelOS" />
@@ -28,17 +32,19 @@
   <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="PixelOS">
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="k" />
   </project>
 
   <!-- External -->
   <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="PixelOS" />
   <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="PixelOS" />
-  <project path="external/skia" name="external_skia" groups="pdk" remote="PixelOS" />
+  <project path="external/skia" name="external_skia" groups="pdk" remote="k" />
+  <project path="system/keymint" name="android_system_keymint" groups="pdk" remote="k" />
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="PixelOS" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="PixelOS" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="PixelOS" />
+  <project path="frameworks/native" name="pos_native" groups="pdk" remote="k" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="PixelOS" />
 
   <!-- Hardware -->
@@ -48,6 +54,7 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="PixelOS" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="PixelOS" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="PixelOS" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="k"/>
 
   <!-- System -->
   <project path="system/core" name="system_core" groups="pdk" remote="PixelOS" />
