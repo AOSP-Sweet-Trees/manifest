@@ -144,6 +144,8 @@
   <remove-project name="platform/packages/modules/adb" />
   <remove-project name="platform/packages/providers/MediaProvider" />
   <remove-project name="platform/packages/modules/Bluetooth" />
+  <remove-project name="LineageOS/android_packages_modules_Wifi" />
+  <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
   <remove-project name="platform/packages/modules/common" />
   <remove-project name="platform/packages/modules/Connectivity" />
   <remove-project name="platform/packages/modules/IntentResolver" />

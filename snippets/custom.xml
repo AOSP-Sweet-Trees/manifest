@@ -32,9 +32,9 @@
   <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="PixelOS">
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
-  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="k" />
   </project>
-
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="k" />
+  
   <!-- External -->
   <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="PixelOS" />
   <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="PixelOS" />
@@ -43,17 +43,17 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="PixelOS" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="PixelOS" />
+  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="k" />
   <project path="frameworks/native" name="pos_native" groups="pdk" remote="k" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="PixelOS" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="k" />
 
   <!-- Hardware -->
   <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel" remote="PixelOS" />
 
   <!-- Packages -->
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="PixelOS" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="k" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="PixelOS" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="PixelOS" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="k" />
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="k"/>
 
   <!-- System -->
@@ -64,16 +64,21 @@
   <!-- Begin Extras -->
 
   <!-- Device -->
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="PixelOS" />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="k" />
 
   <!-- Packages -->
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="PixelOS" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="PixelOS" />
   <project path="packages/apps/Updates" name="packages_apps_Updates" remote="PixelOS" />
+  <project path="packages/apps/GameSpace" name="pos_packages_apps_GameSpace" remote="k" />
+
+  <!-- Modules -->
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="k" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="k" />
 
   <!-- Vendor -->
-  <project path="vendor/aosp" name="vendor_aosp" remote="PixelOS" />
-  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="PixelOS" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="k" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="k" />
   <project path="vendor/gms" name="vendor_gms-14" clone-depth="1" remote="PixelOS-Gitlab" />
 
 </manifest>
